@@ -6,7 +6,6 @@
  * You can only use the putchar
  * return: 0
  */
-
 int main(void)
 {
 	int l = 'a';
