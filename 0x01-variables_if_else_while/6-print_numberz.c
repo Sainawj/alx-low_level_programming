@@ -1,20 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - program that prints all single digit numbers of base 10 
+ * main program that prints all single digit numbers of base 10
  * only use the putchar function
  * Return: 0
  */
 
 int main(void)
 {
-	int n = 48;
+	int i;
 
-	while (n <= 57)
+	for (i = 0; i < 10; i++)
 	{
-		putchar(n);
-		n += 1;
+		putchar(i + '0');
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
