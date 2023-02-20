@@ -6,15 +6,17 @@
  * You can only use the putchar
  * return: 0
  */
+
 int main(void)
 {
-	int l = 'a';
-	while (l <= 'z')
-	{
-		putchar(l);
-		l += 1;
-	}
-		putchar('\n');
-	
-		return (0);
+	char c;
+
+	c = 'a';
+	while
+		(c <= 'z') {
+			putchar(c);
+			c++;
+		}
+	putchar('\n');
+	return (0);
 }
