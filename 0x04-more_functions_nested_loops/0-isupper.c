@@ -1,4 +1,3 @@
-#include "saina.h"
 
 /**
  * _isupper -  checks for uppercase character.
@@ -15,7 +14,5 @@ int _isupper(int c)
 	return (1);
 	}
 	else
-	{
 	return (0);
-	}
 }
