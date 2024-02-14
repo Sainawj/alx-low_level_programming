@@ -11,3 +11,4 @@ int create_file(const char *fname, char *txt_content);
 int append_txt_to_file(const char *fname, char *txt_content);
 
 #endif
+
