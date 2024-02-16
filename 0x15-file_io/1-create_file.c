@@ -31,7 +31,7 @@ int create_fl(const char *fname, char *txt_content)
 	if (fl == -1)
 		return (-1);
 
-	wr(fl, txt_content, i);
+	write(fl, txt_content, i);
 
 	return (1);
 }
