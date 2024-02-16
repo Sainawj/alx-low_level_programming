@@ -16,7 +16,7 @@ int num1 = 1024, num2 = 0;
 char buf[1024];
 
 if (arg != 3)
-	dprintf(STDERR_FILENO, "Usage: copy  file_org to file_des\n"), exit(97);
+	dprintf(STDERR_FILENO, "Usage: cp  file_org file_des\n"), exit(97);
 file_org = open(args[1], O_RDONLY);
 if (file_org == -1)
 {
