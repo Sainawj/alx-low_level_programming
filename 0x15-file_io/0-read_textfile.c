@@ -3,14 +3,14 @@
 #include <stdlib.h>
 
 /**
- * rd_txtfl- Read text to STDOUT
- * @fname: text file to be read
- * @letas: no of letters to be read
+ * read_textfile- Read text to STDOUT
+ * @filename: text file to be read
+ * @letters: no of letters to be read
  * Return: w- actual number of bytes
  * 0 when function fails or fname is NULL
  */
 
-ssize_t rd_txtfl(const char *fname, size_t letas)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t fl, rd, wr;
 	char *txt;
@@ -19,10 +19,10 @@ ssize_t rd_txtfl(const char *fname, size_t letas)
 	if (txt == NULL)
 		return (0);
 
-	if (fname == NULL)
+	if (filename == NULL)
 		return (0);
 
-	fl = open(fname, O_RDONLY);
+	fl = open(filename, O_RDONLY);
 
 	if (fl == -1)
 	{
