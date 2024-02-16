@@ -3,25 +3,25 @@
 #include "holberton.h"
 
 /**
- * create_file - creates a file
- * @text_content: content file
- * @filename: the variable pointer
+ * create_fl - creates a file
+ * @txt_content: content file
+ * @fname: the variable pointer
  * what it does: Creates function for making a file.
  * Return: -1 on failure, 1 when successful
  */
 
-int create_file(const char *fname, char *text_content)
+int create_fl(const char *fname, char *txt_content)
 {
 	int i = 0, fl;
 
 	if (fname == NULL)
 		return (-1);
 
-	if (text_content == NULL)
-		text_content = "";
+	if (txt_content == NULL)
+		txt_content = "";
 
 
-	while (text_content[i] != '\0')
+	while (txt_content[i] != '\0')
 	{
 		i++;
 	}
@@ -31,7 +31,7 @@ int create_file(const char *fname, char *text_content)
 	if (fl == -1)
 		return (-1);
 
-	write(fl, text_content, i);
+	write(fl, txt_content, i);
 
 	return (1);
 }
