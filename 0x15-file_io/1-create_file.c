@@ -3,35 +3,35 @@
 #include "main.h"
 
 /**
- * create_fl - creates a file
- * @txt_content: content file
- * @fname: the variable pointer
+ * create_file - creates a file
+ * @text_content: content file
+ * @filename: the variable pointer
  * Description: Creates function for making a file.
  * Return: -1 on failure, 1 on successful
  */
 
-int create_fl(const char *fname, char *txt_content)
+int create_file(const char *filename, char *text_content)
 {
-	int i = 0, fl;
+	int i = 0, file;
 
-	if (fname == NULL)
+	if (filename == NULL)
 		return (-1);
 
-	if (txt_content == NULL)
-		txt_content = "";
+	if (text_content == NULL)
+		text_content = "";
 
 
-	while (txt_content[i] != '\0')
+	while (text_content[i] != '\0')
 	{
 		i++;
 	}
 
-	fl = open(fname, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
-	if (fl == -1)
+	if (file == -1)
 		return (-1);
 
-	write(fl, txt_content, i);
+	write(file, text_content, i);
 
 	return (1);
 }
