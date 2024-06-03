@@ -21,12 +21,12 @@ def count_water_borders(grid, i, j, rows, cols):
     borders = 0
 
     if i == 0 or grid[i - 1][j] == 0:
-        borders += 1  
+        borders += 1
     if i == rows - 1 or grid[i + 1][j] == 0:
-        borders += 1  
+        borders += 1
     if j == 0 or grid[i][j - 1] == 0:
-        borders += 1  
+        borders += 1
     if j == cols - 1 or grid[i][j + 1] == 0:
-        borders += 1  
+        borders += 1
 
     return borders
