@@ -1,0 +1,35 @@
+# Define the C compiler to be used
+CC = gcc
+
+# Define the source files for the project
+SRC = main.c school.c
+
+# Define the object files, replacing .c extensions with .o
+OBJ = $(SRC:.c=.o)
+
+# Define the name of the output executable
+NAME = school
+
+# Define the command to remove files
+RM = rm -f
+
+# Default target to compile the object files and link them into the final executable
+all: $(OBJ)
+	# Link the object files and create the output executable named 'holberton'
+	$(CC) $(OBJ) -o $(NAME)
+
+# Target to remove temporary files and the output executable
+clean:
+	# Remove backup files and the executable named 'school'
+	$(RM) *~ $(NAME)
+
+# Target to remove object files
+oclean:
+	# Remove the object files
+	$(RM) $(OBJ)
+
+# Target to perform both 'clean' and 'oclean'
+fclean: clean oclean
+
+# Target to recompile the project from scratch
+re: oclean all
