@@ -1,0 +1,10 @@
+# Define the C compiler to be used
+CC = gcc
+
+# Define the source files for the project
+SRC = main.c school.c
+
+# Default target to compile the source files
+all: $(SRC)
+	# Compile the source files and create the output executable named 'school'
+	$(CC) $(SRC) -o school
